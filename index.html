@@ -390,11 +390,14 @@
         }
 
         // Button event listeners
-        document.getElementById('start-btn').addEventListener('click', () => {
-            currentStep = 2;
-            showStep(currentStep);
-        });
-
+    document.getElementById('start-btn').addEventListener('click', () => {
+    const wonderMusic = document.getElementById('wonder-music');
+    if (wonderMusic) {
+        wonderMusic.play();
+    }
+    currentStep = 2;
+    showStep(currentStep);
+ });
         document.getElementById('next-btn-2').addEventListener('click', () => {
             currentStep = 3;
             showStep(currentStep);
@@ -410,6 +413,7 @@
             showStep(currentStep);
         });
 
+        
         // Function to create balloons
         function createBalloons(count) {
             const balloonColors = [
@@ -563,4 +567,5 @@
     </script>
 </body>
 </html>
+
 
